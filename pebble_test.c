@@ -10,12 +10,12 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
   {
     if( tuple -> value ->int32)
     {
-      text_layer_set_text(s_status_layer, "Wake up");
+      text_layer_set_text(s_status_layer, "Wake up!!!");
       text_layer_set_background_color(s_status_layer, GColorRed);
       vibes_long_pulse();
     }else
     {
-      text_layer_set_text(s_status_layer, "Good job");  
+      text_layer_set_text(s_status_layer, "Good job!!!");  
       text_layer_set_background_color(s_status_layer, GColorGreen);
     }
   }
@@ -36,7 +36,7 @@ static void main_window_load(Window *window)
   text_layer_set_text_color(s_status_layer, GColorWhite);
   text_layer_set_text_alignment(s_status_layer, GTextAlignmentCenter);
   text_layer_set_text(s_status_layer, "Loading");
-  text_layer_set_font(s_status_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD));
+  text_layer_set_font(s_status_layer, fonts_get_system_font(FONT_KEY_GOTHIC_28));
   
   layer_add_child(window_layer, text_layer_get_layer(s_status_layer));
 }
