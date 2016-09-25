@@ -1,0 +1,11 @@
+<!doctype html>
+<title>Hello from Flask</title>
+
+{% block body %}
+  <ul style="list-style-type:None"><font face= "Century Gothic" color= "blue">
+  {% for eeg in eeg_array %}
+    <li>  <h1>Channel {{loop.index}}:{{eeg|replace("}"," ")|replace("{"," ")}}</h1></li>
+    <hr>
+  {% endfor %}
+</font>  </ul>
+{% endblock %}
