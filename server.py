@@ -18,4 +18,4 @@ def index():
 	return render_template('hello.html', eeg_array=eeg_array[-12:])
 
 if __name__ == "__main__":
-	app.run(debug=True, server='0.0.0.0')
+	app.run(debug=True, host='0.0.0.0')
