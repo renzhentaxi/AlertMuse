@@ -3,7 +3,7 @@ import argparse
 from pythonosc import dispatcher, osc_server
 from urllib import request, parse
 
-URL = "http://127.0.0.1:8000/hey/?ch1={}&ch2={}&ch3={}&ch4={}"
+URL = "http://104.131.44.27/?ch1={}&ch2={}&ch3={}&ch4={}"
 
 def make_POST(data_dict, url):
     '''Make a post request with eeg data'''

@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 eeg_array = []
 
-@app.route('/hey/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def index():
 
 	if(any(request.args) != False):
@@ -14,8 +14,8 @@ def index():
 			 request.args['ch4']
 		))
 
-		return render_template('hello.html',eeg_array=eeg_array[0].split(","))
-	return render_template('hello.html',eeg_array=eeg_array)
+		return render_template('hello.html', eeg_array=eeg_array[0].split(","))
+	return render_template('hello.html', eeg_array=eeg_array[-12:])
 
 if __name__ == "__main__":
-	app.run(debug=True, port=8000)
+	app.run(debug=True, server='0.0.0.0')
